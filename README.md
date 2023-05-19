@@ -1,16 +1,24 @@
 # distrosetta-stone
 Mapping "how do I" from distro X to Y.
 
-# Package Queries & Management
+This won't be hugely comprehensive (unless it becomes so over time), but I'm jumping from Red Hat-based distros where I don't have to think about "how to X" to Debian-based distros, where I do.  There's loads of great resources out there on the differences / translation but I wanted something *condensed*.
+
+# Package Queries &  Management
 
 | Task  | rpm   | dpkg |
 |--- |--- |--- |
-| List installed packages | `rpm -qa` | `dpkg --list` |
+| List all installed packages | `rpm -qa` | `dpkg --list` |
 | List info on an installed package | `rpm -qi <packagename>` | `dpkg --status <packagename>` |
-| List files in an installed package | `rpm -ql <packagename>` | `dpkg --listfiles <packagename>` |
-| List installed package that owns a file | `rpm -qf <filepath>` | `dpkg -S <filepath>` |
+| List all files in an installed package | `rpm -ql <packagename>` | `dpkg --listfiles <packagename>` |
+| List key config files in an installed package | `rpm -qc <packagename>` | `cat /var/lib/dpkg/info<packagename>.conffiles`  |
+| List key documentation files in an installed package | `rpm -qd <packagename>` |  |
+| List installed package that owns the file | `rpm -qf <filepath>` | `dpkg -S <filepath>` |
+| List info on a package file | `rpm -qpi <packagename.rpm>` | `dpkg --info <packagename.deb>` |
+| List all files in a package file | `rpm -qpl <packagename.rpm>` | `dpkg --contents <packagename.deb>` |
+| List key config files in a package file | `rpm -qpc <packagename>` |  |
+| List key documentation files in a package file | `rpm -qpd <packagename>` |  |
 
-# Repository Queries & Management
+# Repository Queries &  Management
 
 
 
