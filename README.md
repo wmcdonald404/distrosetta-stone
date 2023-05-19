@@ -23,9 +23,9 @@ This won't be hugely comprehensive (unless it becomes so over time), but I'm jum
 | Task  | yum | apt |
 |--- |--- |--- |
 | List all installed packages | `yum list installed` | `apt list --installed` |
-| List all available packages | `yum list available` | `` |
+| List all available packages | `yum list available` | `apt list \| grep -v installed` |
 | List all installed and available packages | `yum list all` | `apt list` |
-| List all installed and available packages for a package | `yum list <packagename>` | `apt list \| grep -v installed` |
+| List all installed and available packages for a package | `yum list <packagename>` |  |
 
 
 # Sources / Inspiration
