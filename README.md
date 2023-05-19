@@ -5,7 +5,7 @@ This won't be hugely comprehensive (unless it becomes so over time), but I'm jum
 
 # Package Queries &  Management
 
-| Task  | rpm   | dpkg |
+| Task  | rpm | dpkg |
 |--- |--- |--- |
 | List all installed packages | `rpm -qa` | `dpkg --list` |
 | List info on an installed package | `rpm -qi <packagename>` | `dpkg --status <packagename>` |
@@ -20,6 +20,12 @@ This won't be hugely comprehensive (unless it becomes so over time), but I'm jum
 
 # Repository Queries &  Management
 
+| Task  | yum | apt |
+|--- |--- |--- |
+| List all installed packages | `yum list installed` | `apt list --installed` |
+| List all available packages | `yum list available` | `` |
+| List all installed and available packages | `yum list all` | `apt list` |
+| List all installed and available packages for a package | `yum list <packagename>` | `apt list \| grep -v installed` |
 
 
 # Sources / Inspiration
