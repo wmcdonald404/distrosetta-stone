@@ -18,6 +18,7 @@ This won't be hugely comprehensive (unless it becomes so over time), but I'm jum
 | List key config files in a package file | `rpm -qpc <packagename>` |  |
 | List key documentation files in a package file | `rpm -qpd <packagename>` |  |
 
+
 # Repository Queries &  Management
 
 | Task  | yum | apt |
@@ -26,7 +27,11 @@ This won't be hugely comprehensive (unless it becomes so over time), but I'm jum
 | List all available packages | `yum list available` | `apt list \| grep -v installed` |
 | List all installed and available packages | `yum list all` | `apt list` |
 | List all installed and available packages for a package | `yum list <packagename>` |  |
+| Refresh the local version of upstream repository metadata/cache | `yum makecache` | `apt-get update` |
+| Show all applicable updates from upstream repositories | `yum check-update` | `apt-get upgrade -s` |
+| Clear local version of upstream repository metadata/cache | `yum clean all` | `apt-get clean` | 
 
+Note: Yum's default cache expiry is 90 mins so `makecache` is rarely required
 
 # Sources / Inspiration
 For years I worked across a bunch of RISC-based Unix variants and having the Unix Rosetta Stone saved me huge amounts of time and effort.
