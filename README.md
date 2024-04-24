@@ -27,6 +27,8 @@ This won't be hugely comprehensive (unless it becomes so over time), but I'm jum
 | List all available packages | `yum list available` | `apt list \| grep -v installed` |
 | List all installed and available packages | `yum list all` | `apt list` |
 | List all installed and available packages for a package | `yum list <packagename>` |  |
+| Search for specific packages | `yum search <packagename>` | `apt search <packagename>` |
+| Get more info for specific packages | `yum info <packagename>` | `apt info <packagename>` |
 | Refresh the local version of upstream repository metadata/cache | `yum makecache` | `apt-get update` |
 | Show all applicable updates from upstream repositories | `yum check-update` | `apt-get upgrade -s` |
 | Clear local version of upstream repository metadata/cache | `yum clean all` | `apt-get clean` | 
