@@ -31,9 +31,14 @@ This won't be hugely comprehensive (unless it becomes so over time), but I'm jum
 | Get more info for specific packages | `yum info <packagename>` | `apt info <packagename>` |
 | Refresh the local version of upstream repository metadata/cache | `yum makecache` | `apt-get update` |
 | Show all applicable updates from upstream repositories | `yum check-update` | `apt-get upgrade -s` |
+| Install a package | `yum install -y <packagename>` | `apt-get -y install <packagename>` |
 | Clear local version of upstream repository metadata/cache | `yum clean all` | `apt-get clean` | 
+| **Note:** Yum's default cache expiry is 90 mins so `makecache` is rarely required |
+| List all files in a package from the repository | `yum repoquery -l <packagename>` | `apt-file list <packagename>`  |
+| **Note:** `apt-file` is not typically installed by default, it requires `apt-get -y install apt-file` before use |  
 
-Note: Yum's default cache expiry is 90 mins so `makecache` is rarely required
+
+
 
 # Sources / Inspiration
 For years I worked across a bunch of RISC-based Unix variants and having the Unix Rosetta Stone saved me huge amounts of time and effort.
@@ -42,3 +47,7 @@ For years I worked across a bunch of RISC-based Unix variants and having the Uni
 - https://kosztkas.github.io/
 - https://www.baeldung.com/linux/yum-and-apt
 - https://wiki.debian.org/RPM
+
+# References
+- https://tylersguides.com/guides/listing-files-in-a-package-with-dnf/
+- https://superuser.com/questions/82923/how-to-list-files-of-a-debian-package-without-install
