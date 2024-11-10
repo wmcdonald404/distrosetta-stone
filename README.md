@@ -29,9 +29,10 @@ This won't be hugely comprehensive (unless it becomes so over time), but I'm jum
 | List all installed and available packages for a package | `yum list <packagename>` |  |
 | Search for specific packages | `yum search <packagename>` | `apt search <packagename>` |
 | Get more info for specific packages | `yum info <packagename>` | `apt info <packagename>` |
-| Refresh the local version of upstream repository metadata/cache | `yum makecache` | `apt-get update` |
-| Show all applicable updates from upstream repositories | `yum check-update` | `apt-get upgrade -s` |
 | Install a package | `yum install -y <packagename>` | `apt-get -y install <packagename>` |
+| Refresh the local version of upstream repository metadata/cache | `yum makecache` | `apt-get update` |
+| Show all applicable updates from upstream repositories | `yum check-update` | `apt-get upgrade -s` (see: `man apt-get`) |
+| Update all packages | `yum update -y`  | `apt-get upgrade` or `apt-get dist-upgrade` |
 | Clear local version of upstream repository metadata/cache | `yum clean all` | `apt-get clean` | 
 | **Note:** Yum's default cache expiry is 90 mins so `makecache` is rarely required |
 | List all files in a package from the repository | `yum repoquery -l <packagename>` | `apt-file list <packagename>`  |
